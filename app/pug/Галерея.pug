@@ -1,0 +1,24 @@
+extends template
+block variables
+    -   var title = 'Галерея'
+    -   var firstRowImages = ["img/Кинжалы/Драконий костяной кинжал.webp", "img/Кинжалы/Жертвенный клинок.webp", "img/Кинжалы/Кинжал драконьего жреца.webp", "img/Кинжалы/Клинок Горя.webp", "img/Кинжалы/Крапивник.webp", "img/Кинжалы/Небесный стальной кинжал.webp", "img/Кинжалы/Орочий кинжал.webp"]
+    -   var secondRowImages = ["img/Мечи/Бич драконов.webp", "img/Мечи/Даэдрический меч.webp", "img/Мечи/Древний нордский меч.webp", "img/Мечи/Железный меч.webp", "img/Мечи/Меч-душегуб.webp", "img/Мечи/Охладитель.webp", "img/Мечи/Скимитар.webp", "img/Мечи/Сталгримовый меч.webp", "img/Мечи/Эбонитовый меч.webp", "img/Мечи/Эдуж.webp"]
+    -   var thirdRowImages = ["img/Топоры/Древний нордский боевой топор.webp", "img/Топоры/Окин.webp", "img/Топоры/Рунный топор Стражи Рассвета.webp", "img/Топоры/Стеклянный боевой топор.webp", "img/Топоры/Топор браконьера.webp", "img/Топоры/Топор Изгоев.webp", "img/Топоры/Хороший фалмерский боевой топор.webp", "img/Топоры/Эбонитовый боевой топор.webp", "img/Топоры/Эльфийский боевой топор.webp"]
+    -   var fourhRowImages = ["img/Прочее/Бич Хоркеров.webp", "img/Прочее/Булава Молага Бала.webp", "img/Прочее/Булава прелата.webp", "img/Прочее/Двемерская булава.webp", "img/Прочее/Древняя нордская кирка.webp", "img/Прочее/Зазубренная кирка.webp", "img/Прочее/Сталгримовая булава.webp"]
+block content
+    .imagesFlex
+        each url in firstRowImages
+            include mixins/imageBlock
+            +createImageBlock(url)
+    .imagesFlex
+        each url in secondRowImages
+            include mixins/imageBlock
+            +createImageBlock(url)
+    .imagesFlex
+        each url in thirdRowImages
+            include mixins/imageBlock
+            +createImageBlock(url)
+    .imagesFlex
+        each url in fourhRowImages
+            include mixins/imageBlock
+            +createImageBlock(url)
